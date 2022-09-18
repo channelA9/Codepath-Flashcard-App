@@ -4,23 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/charleston_green"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/flashcard_question"
+    <FrameLayout
+        android:id="@+id/flashcard"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="What is the largest land border between two countries?"
-        android:textAlignment="center"
-        android:textSize="40sp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/flashcard_answer"
+        <TextView
+            android:id="@+id/flashcard_question"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/front_card"
+            android:gravity="center"
+            android:text="@string/flashcard_1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/flashcard_answer"
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_card"
+            android:gravity="center"
+            android:text="@string/flashcard_1_answer"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:visibility="invisible" />
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/answers"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:text="U.S. Canada Border"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:visibility="invisible" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flashcard">
+
+        <TextView
+            android:id="@+id/answer_1"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_margin="10dp"
+            android:background="@drawable/front_card"
+            android:gravity="center"
+            android:text="@string/flashcard_1_a1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/answer_2"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/answer_1"
+            android:background="@drawable/front_card"
+            android:gravity="center"
+            android:text="@string/flashcard_1_a2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/answer_3"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/answer_2"
+            android:background="@drawable/front_card"
+            android:gravity="center"
+            android:text="@string/flashcard_1_a3"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answers">
+
+        <ToggleButton
+            android:id="@+id/toggleAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/toggle_button"
+            android:checked="true"
+            android:text="ToggleButton"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+    </FrameLayout>
 
 </RelativeLayout>
