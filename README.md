@@ -8,7 +8,7 @@ The baseline functionality for the Codepath Flashcard app. Essentially has a fla
 
 ### App Walk-though
 
-<img src="https://imgur.com/a/oPSs2Eb" width=200><br>
+<img src="https://i.imgur.com/YrDZpry.gif" width=200><br>
 
 ## Required
 - [ X ] Create New Project in Android Studio
