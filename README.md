@@ -20,7 +20,7 @@ The baseline functionality for the Codepath Flashcard app. Essentially has a fla
 - [ X ] toggle the flashcard between the question side and the answer side
 - [ X ] Style the question and answer side of the card to better distinguish between the two sides
 - [ X ] Add selectable multiple choice answers beneath the card
-   - [ X ] Change the background color of the multiple choice answers when clicked to indicate whether the question waanswered correctly
+   - [ X ] Change the background color of the multiple choice answers when clicked to indicate whether the question was answered correctly
       -Slight variation where the correct answer isn't shown on selection, since I coded in a reset to the answer selection.
 - [ X ] Further customize and style the card
    - No borders added for simpler UI
