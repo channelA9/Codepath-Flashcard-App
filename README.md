@@ -1,7 +1,7 @@
 <h1> ## CODEPATH FLASHCARD APP </h1>
 ## Lab 2
 
-<img src="https://imgur.com/xVJxDM5" width=200><br>
+<img src="https://i.imgur.com/XIJWbRh.mp4" width=200><br>
 
 ## Required
 - [ X ] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
