@@ -1,7 +1,14 @@
 <h1> ## CODEPATH FLASHCARD APP </h1>
+
 ## Lab 2
 
-<img src="https://i.imgur.com/XIJWbRh.mp4" width=200><br>
+
+Edit button and error warning <br>
+<img src="https://i.imgur.com/VLfgGVz.gif" width=200><br>
+
+Input handling w/ save button <br>
+<img src="https://i.imgur.com/2dmp6tZ.gif" width=200><br>
+(The order of the correct and wrong questions is also shuffled around randomly each time it is changed)
 
 ## Required
 - [ X ] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
