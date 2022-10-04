@@ -1,8 +1,7 @@
 <h1> ## CODEPATH FLASHCARD APP </h1>
 ## Lab 2
 
-<img src="https://i.imgur.com/2dmp6tZ.gif" width=200><br>
-(the edit and error messages are truncated to reduce gif size)
+<img src="https://imgur.com/xVJxDM5" width=200><br>
 
 ## Required
 - [ X ] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
