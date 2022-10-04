@@ -10,7 +10,8 @@
 - [ X ] User can enter and submit a Question and Answer through the 'Add Card Screen'
 - [ X ] User will see the card they just created on the main screen when they press the 'Save Button'
 - [ X ] Push your progress to GitHub!
-Optional
+- [ X ] Push code to GitHub
+## Optional
 - [ X ] User can edit a card
 - [ X ] An error message is shown if the user doesn't enter both a Question and an Answer
 - [ X ] A notification is shown if the card was created successfully
