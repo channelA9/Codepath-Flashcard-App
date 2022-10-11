@@ -4,45 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/charleston_green"
+    android:background="@color/cultured"
     tools:context=".MainActivity">
-
+    <TextView
+        android:id="@+id/noCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_cards"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:padding="10dp"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"/>
+    <FrameLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/space_cadet">
+        <ImageView
+            android:id="@+id/deleteCard"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/delete"/>
+    </FrameLayout>
     <FrameLayout
         android:id="@+id/flashcard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar">
         <TextView
             android:id="@+id/flashcard_question"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:layout_marginStart="10dp"
+            android:layout_height="220dp"
+            android:paddingHorizontal="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="10dp"
             android:background="@drawable/front_card"
             android:gravity="center"
             android:text="@string/flashcard_1"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/flashcard_answer"
             android:layout_width="match_parent"
-            android:layout_height="300sp"
-            android:layout_marginStart="10dp"
+            android:layout_height="220sp"
+            android:paddingHorizontal="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="10dp"
             android:background="@drawable/back_card"
             android:gravity="center"
             android:text="@string/flashcard_1_answer"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="35sp"
             android:visibility="invisible" />
+
     </FrameLayout>
     <RelativeLayout
         android:id="@+id/answers"
@@ -93,26 +118,42 @@
 
     </RelativeLayout>
 
-    <FrameLayout
-        android:id="@+id/toggle"
+    <RelativeLayout
+        android:id="@+id/leftRight"
+        android:background="@color/space_cadet"
+        android:paddingVertical="6dp"
+        android:layout_marginTop="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/answers">
 
-        <ToggleButton
-            android:id="@+id/toggleAns"
+
+        <ImageView
+            android:id="@+id/previousCard"
+            android:layout_marginLeft="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@drawable/toggle_button"
-            android:checked="true"
-            android:text="ToggleButton"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:visibility="visible" />
-    </FrameLayout>
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/back_arrow"/>
+
+        <ImageView
+            android:id="@+id/shuffleCard"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/shuffle"/>
+
+        <ImageView
+            android:id="@+id/nextCard"
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/forward_arrow"/>
+
+
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/addButton"
@@ -123,6 +164,21 @@
         android:layout_marginRight="12dp"
         android:layout_marginBottom="12dp"
         android:src="@drawable/add_box" />
+    <ToggleButton
+        android:id="@+id/toggleAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/toggle_button"
+        android:checked="true"
+        android:text="ToggleButton"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="visible" />
 
     <ImageView
         android:id="@+id/editButton"
@@ -133,4 +189,5 @@
         android:layout_marginLeft="12dp"
         android:layout_marginBottom="12dp"
         android:src="@drawable/edit_box" />
+
 </RelativeLayout>

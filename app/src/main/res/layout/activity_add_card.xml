@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/charleston_green"
+    android:background="@color/cultured"
     tools:context=".AddCardActivity">
 
     <EditText
@@ -14,8 +14,8 @@
         android:ems="10"
         android:hint="Question"
         android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_black"  />
 
 
     <EditText
@@ -27,8 +27,8 @@
         android:ems="10"
         android:hint="Answer"
         android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_black"  />
 
     <EditText
         android:id="@+id/wrong1Text"
@@ -39,8 +39,8 @@
         android:ems="10"
         android:hint="Wrong answer"
         android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_black"  />
 
     <EditText
         android:id="@+id/wrong2Text"
@@ -51,8 +51,8 @@
         android:ems="10"
         android:hint="Another wrong answer"
         android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_black" />
 
     <ImageView
         android:id="@+id/saveButton"

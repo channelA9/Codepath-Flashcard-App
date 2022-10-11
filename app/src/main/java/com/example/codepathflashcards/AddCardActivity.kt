@@ -37,10 +37,10 @@ class AddCardActivity : AppCompatActivity() {
             val data = Intent() // create a new Intent, this is where we will put our data
             val qString = questionText.text.toString()
             val aString = answerText.text.toString()
-            val w1String = w1AnswerText.text.toString()
-            val w2String = w2AnswerText.text.toString()
+            val w1String = w1AnswerText.text
+            val w2String = w2AnswerText.text
 
-            if (qString.isNotEmpty()) {
+            if (qString.isNotEmpty() && aString.isNotEmpty()) {
                 data.putExtra(
                     "QUESTION_KEY",
                     qString
@@ -51,15 +51,18 @@ class AddCardActivity : AppCompatActivity() {
                     aString
                 )
 
-                data.putExtra(
-                    "WRONG_1_ANSWER_KEY",
-                    w1String
-                )
+                if (qString.isNotEmpty() && aString.isNotEmpty()) {
+                    data.putExtra(
+                        "WRONG_1_ANSWER_KEY",
+                        w1String
+                    )
 
-                data.putExtra(
-                    "WRONG_2_ANSWER_KEY",
-                    w2String
-                )
+                    data.putExtra(
+                        "WRONG_2_ANSWER_KEY",
+                        w2String
+                    )
+
+                }
 
                 setResult(RESULT_OK, data)
 

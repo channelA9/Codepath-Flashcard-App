@@ -9,14 +9,20 @@
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable-v24/right_card.xml" value="0.2985" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable-v24/toggle_button.xml" value="0.196" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable-v24/wrong_card.xml" value="0.2985" />
+        <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/back_arrow.xml" value="0.182" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/check_circle-48px (1).xml" value="0.196" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/check_circle-48px.xml" value="0.278" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/check_circle.xml" value="0.196" />
+        <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/delete.xml" value="0.196" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/edit_box.xml" value="0.269" />
+        <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/forward_arrow.xml" value="0.182" />
+        <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/front_card.xml" value="0.196" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/ic_add_box_fill0_wght400_grad0_opsz48.xml" value="0.279" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/ic_cancel_fill0_wght400_grad0_opsz48.xml" value="0.279" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/ic_check_circle_fill0_wght400_grad0_opsz48.xml" value="0.196" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
+        <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/remove_circle.xml" value="0.1815" />
+        <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/shuffle.xml" value="0.196" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/drawable/solid_color_shape.xml" value="0.2985" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/layout/activity_add_card.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/nickc/AndroidStudioProjects/CodepathFlashcards/app/src/main/res/layout/activity_main.xml" value="0.25" />
