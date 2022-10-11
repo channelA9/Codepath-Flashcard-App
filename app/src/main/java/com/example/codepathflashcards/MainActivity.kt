@@ -243,9 +243,7 @@ class MainActivity : AppCompatActivity() {
             if (allFlashcards.size > 1) {
                 cleanAns()
                 val oldI = indice
-                while (indice == oldI) {
-                    indice = (0 until allFlashcards.size - 1).random()
-                }
+                indice = (0 until allFlashcards.size).random()
                 readFromFlashCard(allFlashcards[indice])
             }
             else {
