@@ -108,19 +108,24 @@ class MainActivity : AppCompatActivity() {
             if (allFlashcards.size > 0) {
 
                 indice = 0
+
+
+                noCardView.visibility = View.INVISIBLE
+
                 updateCard(
                     allFlashcards[0].question,
                     allFlashcards[0].answer,
                     allFlashcards[0].wrongAnswer1,
                     allFlashcards[0].wrongAnswer2)
 
-                noCardView.visibility = View.INVISIBLE
-
                 flashCard.visibility = View.VISIBLE
                 flashSelection.visibility = View.VISIBLE
                 leftRightBar.visibility = View.VISIBLE
                 editBtn.visibility = View.VISIBLE
                 toggle.visibility = View.VISIBLE
+
+
+
             }
             else {
                 noCardView.visibility = View.VISIBLE
