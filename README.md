@@ -13,7 +13,7 @@
 - [ ] User can edit a card and see the edit saved when they browse through their deck of cards
 - [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
 
-<img src="https://i.imgur.com/xODXo7n.gif" width="200"/>  
+<img src="https://i.imgur.com/Ox7UHdT.gif" width="200"/>  
 
 ## Lab 2
 
