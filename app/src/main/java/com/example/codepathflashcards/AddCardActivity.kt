@@ -37,8 +37,9 @@ class AddCardActivity : AppCompatActivity() {
             val data = Intent() // create a new Intent, this is where we will put our data
             val qString = questionText.text.toString()
             val aString = answerText.text.toString()
-            val w1String = w1AnswerText.text
-            val w2String = w2AnswerText.text
+            val w1String = w1AnswerText.text.toString()
+            val w2String = w2AnswerText.text.toString()
+
 
             if (qString.isNotEmpty() && aString.isNotEmpty()) {
                 data.putExtra(

@@ -271,12 +271,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         editBtn.setOnClickListener {
-               // val intent = Intent(this, AddCardActivity::class.java)
-               // intent.putExtra("ORIGINAL_QUESTION_KEY", flashQst.text.toString())
-               // intent.putExtra("ORIGINAL_ANSWER_KEY", flashQst.text.toString())
-               // resultLauncher.launch(intent)
-
-            // temporarily removed
+            val intent = Intent(this, AddCardActivity::class.java)
+            intent.putExtra("ORIGINAL_QUESTION_KEY", flashQst.text.toString())
+            intent.putExtra("ORIGINAL_ANSWER_KEY", flashQst.text.toString())
+            resultLauncher.launch(intent)
         }
 
     }
