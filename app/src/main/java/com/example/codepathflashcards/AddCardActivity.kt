@@ -30,6 +30,7 @@ class AddCardActivity : AppCompatActivity() {
 
         backButton.setOnClickListener {
             finish()
+            overridePendingTransition(R.anim.flow_in_from_left, R.anim.flow_out_right)
         }
 
         saveButton.setOnClickListener {
@@ -67,12 +68,13 @@ class AddCardActivity : AppCompatActivity() {
 
                 setResult(RESULT_OK, data)
 
-                Toast.makeText(applicationContext, "Successfully changed card!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(applicationContext, "Successfully changed card!", Toast.LENGTH_SHORT).show()
 
                 finish()
+                overridePendingTransition(R.anim.flow_in_from_left, R.anim.flow_out_right)
             }
             else {
-                Toast.makeText(applicationContext, "Please fill in all the boxes!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(applicationContext, "Please fill in all the boxes!", Toast.LENGTH_SHORT).show()
             }
         }
     }

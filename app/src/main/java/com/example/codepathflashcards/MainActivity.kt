@@ -4,8 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewAnimationUtils
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import kotlin.math.hypot
 
 class MainActivity : AppCompatActivity() {
     lateinit var flashcardDatabase: FlashcardDatabase
@@ -38,19 +42,62 @@ class MainActivity : AppCompatActivity() {
         val nextBtn = findViewById<ImageView>(R.id.nextCard)
         val shuffleBtn = findViewById<ImageView>(R.id.shuffleCard)
 
+        val flowInLeftAnim = AnimationUtils.loadAnimation(this, R.anim.flow_in_from_left)
+        val flowInRightAnim = AnimationUtils.loadAnimation(this, R.anim.flow_in_from_right)
+        val flowOutLeftAnim = AnimationUtils.loadAnimation(this, R.anim.flow_out_left)
+        val flowOutRightAnim = AnimationUtils.loadAnimation(this, R.anim.flow_out_right)
+        val spinAnim = AnimationUtils.loadAnimation(this, R.anim.spin)
+
         var showAnswers = true
         var tempShow = false
         var answered = false
         var indice = 0
 
+        flowOutLeftAnim.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+            }
 
+            override fun onAnimationEnd(animation: Animation?) {
+                flashCard.startAnimation(flowInRightAnim)
+            }
 
+            override fun onAnimationRepeat(animation: Animation?) {
+
+            }
+
+        })
+
+        flowOutRightAnim.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                flashCard.startAnimation(flowInLeftAnim)
+            }
+
+            override fun onAnimationRepeat(animation: Animation?) {
+
+            }
+
+        })
+
+        fun circleReveal(obj:View,dur:Long) {
+            val cx = obj.width / 2
+            val cy = obj.height / 2
+
+            val finalRadius = hypot(cx.toDouble(), cy.toDouble()).toFloat()
+            val revealAnim = ViewAnimationUtils.createCircularReveal(obj, cx, cy, 0f, finalRadius)
+
+            revealAnim.duration = dur
+            revealAnim.start()
+        }
         fun cleanAns() {
             answered = false
             flashA1.setBackgroundResource(R.drawable.front_card)
             flashA2.setBackgroundResource(R.drawable.front_card)
             flashA3.setBackgroundResource(R.drawable.front_card)
         }
+
         fun checkAns(a:TextView) {
             if(!answered) {
                 answered = true
@@ -186,14 +233,14 @@ class MainActivity : AppCompatActivity() {
         // flashcard
 
         flashQst.setOnClickListener {
-            if(!showAnswers or tempShow) {
-                flashQst.visibility = View.INVISIBLE
-                flashAns.visibility = View.VISIBLE
-            }
+            flashQst.visibility = View.INVISIBLE
+            flashAns.visibility = View.VISIBLE
+            circleReveal(flashAns,1000)
         }
         flashAns.setOnClickListener {
             flashAns.visibility = View.INVISIBLE
             flashQst.visibility = View.VISIBLE
+            circleReveal(flashQst,1000)
         }
 
         // answers
@@ -212,11 +259,14 @@ class MainActivity : AppCompatActivity() {
 
         prevBtn.setOnClickListener {
             if (allFlashcards.size > 1){
+
                 if (indice == 0) {
                     indice = allFlashcards.size - 1
                 } else if (indice > 0) {
                     indice -= 1
                 }
+                flashCard.startAnimation(flowOutRightAnim)
+
                 readFromFlashCard(allFlashcards[indice])
             }
             else {
@@ -227,11 +277,15 @@ class MainActivity : AppCompatActivity() {
         nextBtn.setOnClickListener {
             cleanAns()
             if (allFlashcards.size > 1) {
+
                 if (indice == allFlashcards.size - 1) {
                     indice = 0
                 } else if (indice < allFlashcards.size - 1) {
                     indice += 1
                 }
+
+                flashCard.startAnimation(flowOutLeftAnim)
+
                 readFromFlashCard(allFlashcards[indice])
             }
             else {
@@ -241,6 +295,7 @@ class MainActivity : AppCompatActivity() {
 
         shuffleBtn.setOnClickListener {
             if (allFlashcards.size > 1) {
+                flashCard.startAnimation(spinAnim)
                 cleanAns()
                 val oldI = indice
                 indice = (0 until allFlashcards.size).random()
@@ -271,6 +326,7 @@ class MainActivity : AppCompatActivity() {
         addBtn.setOnClickListener {
             val intent = Intent(this, AddCardActivity::class.java)
             resultLauncher.launch(intent)
+            overridePendingTransition(R.anim.flow_in_from_right, R.anim.flow_out_left)
         }
 
         editBtn.setOnClickListener {
@@ -278,6 +334,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("ORIGINAL_QUESTION_KEY", flashQst.text.toString())
             intent.putExtra("ORIGINAL_ANSWER_KEY", flashQst.text.toString())
             resultLauncher.launch(intent)
+            overridePendingTransition(R.anim.flow_in_from_right, R.anim.flow_out_left)
         }
 
     }

@@ -14,5 +14,6 @@
     <color name="red">#CC2929</color>
     <color name="green">#29CC78</color>
     <color name="space_cadet">#212738</color>
+    <color name="dark_space_cadet">#1d212e</color>
     <color name="cultured">#EDF2EF</color>
 </resources>
