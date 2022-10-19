@@ -1,7 +1,21 @@
 <h1> ## CODEPATH FLASHCARD APP </h1>
 
-## Lab 2
+## Lab 3 : 
 
+## Required
+- [X] User can create a card and still see their created card when the app is relaunched.
+- [X] User can create muliple cards and browse through all created cards
+
+## Optional
+- [X] User can delete a card and no longer see it in their deck anymore
+- [X] Flashcards are shown in random order instead of the order they were created in
+      - Alternative "Shuffle" button added to achieve this, which gives a random indice within the list bounds. 
+- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+
+<img src="https://i.imgur.com/Ox7UHdT.gif" width="200"/>  
+
+## Lab 2
 
 Edit button and error warning <br>
 <img src="https://i.imgur.com/VLfgGVz.gif" width=200><br>
