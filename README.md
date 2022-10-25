@@ -1,5 +1,19 @@
 <h1> ## CODEPATH FLASHCARD APP </h1>
+## Lab 4 : 
 
+## Required
+- [X] User sees a transition animation when going from the main screen to the add card screen.
+- [X] User sees a reveal animation when the flashcard is tapped and the answer is shown
+- [X] User sees flashcards animating in / out when the 'next' button is tapped
+
+## Optional
+- [ ] Extra styling is added!
+- [ ] User sees a countdown timer for each question
+- [ ] User sees a 'card flip' animation when the card is tapped
+- [ ] User sees a celebration animation with confetti when they answer a question correctly
+
+<img src="https://i.imgur.com/eE43axq.png" width="200" height="400" />  
+<img src="https://i.imgur.com/pbpYiUn.gif" width="200" height="400" />  
 ## Lab 3 : 
 
 ## Required
